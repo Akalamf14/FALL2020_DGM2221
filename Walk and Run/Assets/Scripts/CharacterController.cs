@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 10;
+    private float verticalInput, horizontalInput;
 
     private Rigidbody rBody;
 
@@ -15,9 +16,22 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        float vertInput = Input.GetAxis("Vertical");
-        float horInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        Vector3 movement = new Vector3(vertInput, 0, horInput) * moveSpeed * Time.deltaTime;
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * verticalInput);
+        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime * horizontalInput);
+
+        if(Input.GetKey(KeyCode.F))
+        {
+            moveSpeed = 30;
+            
+        }
+        else
+        {
+            moveSpeed = 10;
+            
+        }
+        
     }
 }
