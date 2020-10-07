@@ -7,10 +7,12 @@ public class JumpBehaviour : MonoBehaviour
     public float jumpHeight;
     public bool isGrounded;
     private Rigidbody gameCharacter;
+    
 
     void Start()
     {
-        gameCharacter = GetComponent<Rigidbody>();
+       gameCharacter = GetComponent<Rigidbody>();
+       
     }
 
 
@@ -23,7 +25,7 @@ public class JumpBehaviour : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            gameCharacter.AddForce(new Vector3(0,5,0), ForceMode.Impulse);
+            gameCharacter.AddForce(new Vector3(0,20,0), ForceMode.Impulse);
             isGrounded = false;
         }
     }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class Move1 : MonoBehaviour
 {
-    public float moveSpeed = 10;
+    public float moveSpeed = 10, turnSpeed = 30;
     private float verticalInput, horizontalInput;
 
     private Rigidbody rBody;
@@ -20,7 +20,8 @@ public class CharacterController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * verticalInput);
-        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime * horizontalInput);
+        //transform.Translate(Vector3.right * moveSpeed * Time.deltaTime * horizontalInput);
+        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
 
         if(Input.GetKey(KeyCode.F))
         {
