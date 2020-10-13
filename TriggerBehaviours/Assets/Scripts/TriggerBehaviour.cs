@@ -9,8 +9,9 @@ public class TriggerBehaviour : MonoBehaviour
     private MeshRenderer meshR;
 
     private WaitForSeconds wfs;
-    public int holdTime = 3;
+    public int holdTime = 10;
     public GameObject door;
+    public TimerUI timer;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class TriggerBehaviour : MonoBehaviour
 
     private IEnumerator OnTriggerExit(Collider other)
     {
+        StartCoroutine(timer.Countdown());
         yield return wfs;
         meshR.material.color = defaultColor;
         door.SetActive(true);
