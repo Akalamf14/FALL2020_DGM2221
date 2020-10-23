@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MonoEventsBehaviour : MonoBehaviour
 {
-   public UnityEvent startEvent, onEnableEvent;
+   public UnityEvent startEvent, onEnableEvent, onDisableEvent;
 
     private void Start()
     {
@@ -15,6 +15,12 @@ public class MonoEventsBehaviour : MonoBehaviour
     private void OnEnable()
     {
         onEnableEvent.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        onDisableEvent.Invoke();
+
     }
 
 }

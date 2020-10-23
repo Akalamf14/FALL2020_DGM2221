@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60756a85ad43e3a41ac27bdc612a211b, type: 3}
-  m_Name: Death
+  m_Script: {fileID: 11500000, guid: ab11981a3cb16f9498a54a2a1a596648, type: 3}
+  m_Name: SpawnPoint
   m_EditorClassIdentifier: 
-  value: 0
-  lessThanZeroEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  value: {x: 0, y: 1, z: 10}

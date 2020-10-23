@@ -40,5 +40,10 @@ public class FloatData : ScriptableObject
                 }
         }
 
+        public void ResetValue(float number)
+        {
+                value = number;
+
+        }
 
 }
