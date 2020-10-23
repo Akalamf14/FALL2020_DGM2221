@@ -228,25 +228,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 86867855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec7b2e3872c0504ca0bfc8f17474482, type: 3}
+  m_Script: {fileID: 11500000, guid: f29b96907ab8d1b438939de0d516ffc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerEnterEvent:
+  onInvokeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: fc1da7bb810714944aad4454792046b6, type: 2}
-        m_TargetAssemblyTypeName: Vector3Data, Assembly-CSharp
-        m_MethodName: SetValueFromPosition
-        m_Mode: 2
+      - m_Target: {fileID: 1033670086}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 1169369705}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-  delayTime: 0.01
+      - m_Target: {fileID: 11400000, guid: a564ee02be941e54fbf13bc14b70a79f, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  holdTime: 3
 --- !u!1 &251018987
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +398,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.1
+          m_FloatArgument: -0.55
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -845,6 +857,46 @@ MonoBehaviour:
   normalSpeed: {fileID: 11400000, guid: a287eeeb6ff5db6479e562f841aa198c, type: 2}
   fastSpeed: {fileID: 11400000, guid: 06b7d985e00f3124ea66f0160671163d, type: 2}
   playerJumpCount: {fileID: 11400000, guid: 8871bb57f22e31549a6a3f49b9420e52, type: 2}
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 86867860}
+        m_TargetAssemblyTypeName: InvokeBehaviour, Assembly-CSharp
+        m_MethodName: OnInvoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a564ee02be941e54fbf13bc14b70a79f, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetImageFillAmount
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1508810985}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1033670086}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerHealth: {fileID: 11400000, guid: a564ee02be941e54fbf13bc14b70a79f, type: 2}
 --- !u!65 &1033670088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -935,6 +987,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
     m_PersistentCalls:
+      m_Calls: []
+  onEnableEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: fc1da7bb810714944aad4454792046b6, type: 2}
         m_TargetAssemblyTypeName: Vector3Data, Assembly-CSharp
@@ -948,24 +1003,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onEnableEvent:
-    m_PersistentCalls:
-      m_Calls: []
   onDisableEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: fc1da7bb810714944aad4454792046b6, type: 2}
-        m_TargetAssemblyTypeName: Vector3Data, Assembly-CSharp
-        m_MethodName: SetPositionFromValue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1169369705}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!143 &1033670093
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1013,25 +1053,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169369700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29b96907ab8d1b438939de0d516ffc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ec7b2e3872c0504ca0bfc8f17474482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onInvokeEvent:
+  triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: fc1da7bb810714944aad4454792046b6, type: 2}
         m_TargetAssemblyTypeName: Vector3Data, Assembly-CSharp
-        m_MethodName: SetPositionFromValue
+        m_MethodName: SetValueFromPosition
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1033670091}
+          m_ObjectArgument: {fileID: 1169369705}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  holdTime: 0.01
+  delayTime: 0.01
 --- !u!135 &1169369702
 SphereCollider:
   m_ObjectHideFlags: 0
