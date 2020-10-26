@@ -407,7 +407,8 @@ GameObject:
   - component: {fileID: 1646057084}
   - component: {fileID: 1646057083}
   - component: {fileID: 1646057081}
-  - component: {fileID: 1646057089}
+  - component: {fileID: 1646057087}
+  - component: {fileID: 1646057082}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -431,6 +432,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1646057082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646057080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4b1031295d13346a3895112ab841ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 120
+  gravity: -9.81
+  jumpForce: 10
+  normalSpeed: {fileID: 0}
+  fastSpeed: {fileID: 0}
+  playerJumpCount: {fileID: 0}
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  playerHealth: {fileID: 0}
 --- !u!65 &1646057083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -507,19 +530,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1646057089
-MonoBehaviour:
+--- !u!143 &1646057087
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646057080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dbbd4974ef93aa47b1ed84e460c5048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  turnSpeed: 60
-  jumpHeight: 2
-  isGrounded: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

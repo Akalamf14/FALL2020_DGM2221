@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60756a85ad43e3a41ac27bdc612a211b, type: 3}
-  m_Name: NormalSpeed
+  m_Script: {fileID: 11500000, guid: 3852fcf99ff711f45847afbaafbbfb36, type: 3}
+  m_Name: CurrentAmmo
   m_EditorClassIdentifier: 
-  value: 10
-  lessThanZeroEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  value: 0

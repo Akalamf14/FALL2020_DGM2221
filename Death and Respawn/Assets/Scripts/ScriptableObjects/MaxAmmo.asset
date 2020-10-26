@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482495875a3f78d42a2888787526ecfe, type: 3}
-  m_Name: MoveSpeed
+  m_Script: {fileID: 11500000, guid: 3852fcf99ff711f45847afbaafbbfb36, type: 3}
+  m_Name: MaxAmmo
   m_EditorClassIdentifier: 
-  value: 0
+  value: 10

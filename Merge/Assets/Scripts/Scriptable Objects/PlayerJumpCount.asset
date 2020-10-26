@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64e3b93fb3979fe4db2e9f7296a84659, type: 3}
+  m_Script: {fileID: 11500000, guid: 07116e4d67735a94b8f116be981a41e9, type: 3}
   m_Name: PlayerJumpCount
   m_EditorClassIdentifier: 
-  value: 5
+  value: 2
