@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class CharacterBehaviour : MonoBehaviour
 {
-    public float rotateSpeed = 120f, gravity =-9.81f, jumpForce;
+    public float rotateSpeed = 120f, gravity = -9.81f, jumpForce = 10f;
     public FloatData normalSpeed, fastSpeed;
     public IntData playerJumpCount;
 
@@ -16,19 +17,18 @@ public class CharacterBehaviour : MonoBehaviour
     protected float vInput, hInput;
     protected FloatData moveSpeed;
 
-    protected float yVar;
+    private float yVar;
     private int jumpCount;
+
+    //public UnityEvent onDeathEvent;
+    //public FloatData playerHealth;
 
     private void OnEnable()
     {
         moveSpeed = normalSpeed;
-        controller.GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         StartCoroutine(Move());
-    }
 
-    private void OnDisable()
-    {
-        StopAllCoroutines();
     }
 
     protected IEnumerator Move()
@@ -36,6 +36,8 @@ public class CharacterBehaviour : MonoBehaviour
         canMove = true;
         while(canMove)
         {
+            OnHorizontal();
+            OnVertical();
             OnMove();
             yield return wffu;
         }
@@ -43,17 +45,23 @@ public class CharacterBehaviour : MonoBehaviour
 
     protected virtual void OnHorizontal()
     {
+        hInput = Input.GetAxis("Horizontal") * Time.deltaTime * rotateSpeed;
         transform.Rotate(0, hInput, 0);
     }
 
     protected virtual void OnVertical()
     {
-        vInput = Input.GetAxis("Horizontal") * moveSpeed.value;
-        movement.Set(vInput, yVar, 0);
+        vInput = Input.GetAxis("Vertical") * moveSpeed.value;
     }
 
     private void OnMove()
     {
+
+       // if(playerHealth.value <= 0)
+        //{
+            //onDeathEvent.Invoke();
+        //}
+
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             moveSpeed = fastSpeed;
@@ -64,13 +72,9 @@ public class CharacterBehaviour : MonoBehaviour
             moveSpeed = normalSpeed;
         }
 
-        OnVertical();
-        OnHorizontal();
-
         yVar += gravity * Time.deltaTime;
 
-        
-        if(controller.isGrounded && movement.y < 0)
+        if(controller.isGrounded && movement.y <0)
         {
             yVar = -1f;
             jumpCount = 0;
@@ -82,7 +86,13 @@ public class CharacterBehaviour : MonoBehaviour
             jumpCount++;
         }
 
+        movement.Set(vInput,yVar,hInput);
         movement = transform.TransformDirection(movement);
         controller.Move((movement) * Time.deltaTime);
+    }
+    
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }
