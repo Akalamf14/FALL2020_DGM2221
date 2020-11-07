@@ -7,7 +7,7 @@ public class CharacterBehaviour : MonoBehaviour
 {
     public float rotateSpeed = 120f, gravity =-9.81f, jumpForce;
     public FloatData normalSpeed, fastSpeed;
-    //public IntData playerJumpCount;
+    public IntData playerJumpCount;
 
     protected CharacterController controller;
     protected Vector3 movement;
@@ -17,7 +17,7 @@ public class CharacterBehaviour : MonoBehaviour
     protected FloatData moveSpeed;
 
     protected float yVar;
-    //private int jumpCount;
+    private int jumpCount;
 
     private void OnEnable()
     {
@@ -54,12 +54,22 @@ public class CharacterBehaviour : MonoBehaviour
 
     private void OnMove()
     {
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            moveSpeed = fastSpeed;
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            moveSpeed = normalSpeed;
+        }
+
         OnVertical();
         OnHorizontal();
 
         yVar += gravity * Time.deltaTime;
 
-        /*
+        
         if(controller.isGrounded && movement.y < 0)
         {
             yVar = -1f;
@@ -71,7 +81,6 @@ public class CharacterBehaviour : MonoBehaviour
             yVar = jumpForce;
             jumpCount++;
         }
-        */
 
         movement = transform.TransformDirection(movement);
         controller.Move((movement) * Time.deltaTime);
