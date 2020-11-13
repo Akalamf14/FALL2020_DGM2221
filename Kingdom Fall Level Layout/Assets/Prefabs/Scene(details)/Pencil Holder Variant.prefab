@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 665886320409728140, guid: c2a1c63b7b99a9d4d9b1bb8a24b24d8d, type: 3}
       propertyPath: m_Name
-      value: Pencil Holder
+      value: Pencil Holder Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1441710278171713777, guid: c2a1c63b7b99a9d4d9b1bb8a24b24d8d, type: 3}
       propertyPath: m_Tangents.Array.data[4].x
@@ -779,6 +779,10 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[979].z
       value: NaN
       objectReference: {fileID: 0}
+    - target: {fileID: 4367021007453620124, guid: c2a1c63b7b99a9d4d9b1bb8a24b24d8d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4330103f065b9314c84f1390ed5da90f, type: 2}
     - target: {fileID: 5341512513098328693, guid: c2a1c63b7b99a9d4d9b1bb8a24b24d8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.27523
