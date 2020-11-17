@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5794577739108102148}
   - component: {fileID: 9111563320849777228}
   - component: {fileID: 2653817850541526520}
+  - component: {fileID: 8560043076475727278}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -95,3 +96,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8560043076475727278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933567524946413936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f0eec79e687cb489fe11994c35fe66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8933567524946413936}
+  holdTime: 0.5
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onCallEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  restartLoopEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  instanceCount: 10
