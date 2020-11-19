@@ -8,11 +8,19 @@ public class NavAgentBehaviour : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform destination;
+    public GameAction getTransformAction, callForTransformAction;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         destination = transform;
+        getTransformAction.transformAction += HandleTransform;
+        callForTransformAction.action?.Invoke();
+    }
+
+    private void HandleTransform(Transform obj)
+    {
+        destination = obj;
     }
 
     private void OnTriggerEnter(Collider other)
