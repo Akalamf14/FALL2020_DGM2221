@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,7 +49,7 @@ public class PlayerShoot : MonoBehaviour
         StartCoroutine(CoolDown());
 
     }
-    */
+    
 
     private IEnumerator CoolDown()
     {
@@ -66,3 +67,4 @@ public class PlayerShoot : MonoBehaviour
 
     }
 }
+*/
