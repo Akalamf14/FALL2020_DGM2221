@@ -41,7 +41,7 @@ public class PlayerShoot : MonoBehaviour
     private IEnumerator reload()
     {
         canShoot = false;
-        var countDown = reloadTime.value;
+        var countDown = reloadTime;
 
         while(countDown > 0)
         {

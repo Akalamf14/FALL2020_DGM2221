@@ -24,34 +24,32 @@ public class AIBehaviour : MonoBehaviour
         canPatrol = false;
         agent.destination = destination.position;
         var distance = agent.remainingDistance;
-        while(distance <= 0.25f)
+        while (distance <= 0.25f)
         {
             distance = agent.remainingDistance;
             yield return wffu;
         }
-
         yield return new WaitForSeconds(2f);
 
         StartCoroutine(canHunt ? OnTriggerEnter(other) : Patrol());
     }
-
     private void OnTriggerExit(Collider other)
     {
         canHunt = false;
+        //StartCoroutine(Patrol());
     }
-
-    private int i = 0;
     
+    private int i = 0;
     private IEnumerator Patrol()
     {
         canPatrol = true;
-        while(canPatrol)
+        while (canPatrol)
         {
             yield return wffu;
-            if(agent.pathPending || !(agent.remainingDistance < 0.5f)) continue;
+            if (agent.pathPending || !(agent.remainingDistance < 0.5f)) continue;
             yield return new WaitForSeconds(1);
             agent.destination = patrolPoints[i].position;
-            i = (i +1) % patrolPoints.Count;
+            i = (i + 1) % patrolPoints.Count;
         }
     }
 }

@@ -5,10 +5,8 @@ using UnityEngine.AI;
 public class AIBrainBase : ScriptableObject
 {
     public float speed;
-    public float alertDist;
-    public float attackDist;
+    public float health;
     
-    public int damage;
 
     public void Navigate(NavMeshAgent agent)
     {

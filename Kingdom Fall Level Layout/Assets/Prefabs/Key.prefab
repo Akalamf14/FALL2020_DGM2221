@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 243752205141341656}
   - component: {fileID: 3219108472818573191}
   - component: {fileID: -8976687395351289951}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7528,6 +7528,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayEvent:
     m_PersistentCalls:
       m_Calls: []
   delayTime: 0.01

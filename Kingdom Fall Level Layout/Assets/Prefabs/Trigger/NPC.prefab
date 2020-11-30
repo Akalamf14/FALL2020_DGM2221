@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8277323210797200567}
   - component: {fileID: 2437602237268067203}
   - component: {fileID: 7311814160677852201}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Right Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 9108083170112828021}
   - component: {fileID: 1118497113794654674}
   - component: {fileID: 7600692072735706365}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +213,9 @@ MonoBehaviour:
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
+  triggerStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
   delayTime: 0.01
 --- !u!1 &4072595843797586533
 GameObject:
@@ -226,7 +229,7 @@ GameObject:
   - component: {fileID: 2381197060616143586}
   - component: {fileID: 2967681838227053055}
   - component: {fileID: 8187866322098508813}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +324,7 @@ GameObject:
   - component: {fileID: 5593312380154232768}
   - component: {fileID: 4498489760478600113}
   - component: {fileID: 5897833211978676426}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

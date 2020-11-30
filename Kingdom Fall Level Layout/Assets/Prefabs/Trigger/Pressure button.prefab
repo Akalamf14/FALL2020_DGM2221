@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 861284146305812670}
   - component: {fileID: 1124496325367368654}
   - component: {fileID: -3973760877045497819}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pressure button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,6 +124,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayEvent:
     m_PersistentCalls:
       m_Calls: []
   delayTime: 0.01
