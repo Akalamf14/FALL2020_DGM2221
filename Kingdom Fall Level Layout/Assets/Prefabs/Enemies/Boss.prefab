@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8056501198693101553}
   - component: {fileID: -653211023786124821}
   - component: {fileID: -4142690365463712233}
+  - component: {fileID: -4157229312265046559}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -137,3 +138,37 @@ MonoBehaviour:
   speed: 0
   alertDist: 0
   attackDist: 0
+--- !u!114 &-4157229312265046559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049315036600609796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062897778b0882e4a96e6fcf0d4593df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3709b234522dd3841a0906b990cefe34, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  delayTime: 0.01

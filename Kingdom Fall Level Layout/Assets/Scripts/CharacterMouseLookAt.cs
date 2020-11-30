@@ -9,7 +9,8 @@ public class CharacterMouseLookAt : MonoBehaviour
    private CharacterController controller;
    private Vector3 movement;
 
-   public float rotateSpeed = 30f, gravity = -9.81f, jumpForce = 10f;
+   public float rotateSpeed = 30f, gravity = -9.81f;
+   public FloatData jumpForce;
    private float yVar;
 
    public FloatData normalSpeed, fastSpeed;
@@ -18,11 +19,14 @@ public class CharacterMouseLookAt : MonoBehaviour
 
    public IntData playerJumpCount;
    private int jumpCount;
+   public IntData powerUpJumpCount;
 
    private void Start()
    {
        moveSpeed = normalSpeed;
        controller = GetComponent<CharacterController>();
+       jumpForce.value = 3.5f;
+       powerUpJumpCount.value = 3;
    }
 
    void Update()
@@ -59,8 +63,14 @@ public class CharacterMouseLookAt : MonoBehaviour
 
        if(Input.GetButtonDown("Jump") && jumpCount < playerJumpCount.value)
        {
-           yVar = jumpForce;
+           yVar = jumpForce.value;
            jumpCount++;
+           powerUpJumpCount.value--;
+           if(powerUpJumpCount.value <= 0)
+           {
+               powerUpJumpCount.value = 0;
+               jumpForce.value = 3.5f;
+           }
        }
 
        movement = transform.TransformDirection(movement);

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9caf24a317c1b7344b697fbe2af7e5bc, type: 3}
   m_Name: JumpCount
   m_EditorClassIdentifier: 
-  value: 3
+  value: 1
+  countdownEvent:
+    m_PersistentCalls:
+      m_Calls: []
