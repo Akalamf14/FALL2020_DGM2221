@@ -18,8 +18,13 @@ public class StringListData : ScriptableObject
 
     public void GetNextString()
     {
-        returnValue = stringList[i];
-        i = (i + 1) % stringList.Count;
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            returnValue = stringList[i];
+            i = (i + 1) % stringList.Count;
+
+        }
+        
     }
 
     public void SetTextUIToValue(Text obj)

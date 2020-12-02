@@ -63,17 +63,21 @@ public class CharacterMouseLookAt : MonoBehaviour
 
        if(Input.GetButtonDown("Jump") && jumpCount < playerJumpCount.value)
        {
-           yVar = jumpForce.value;
-           jumpCount++;
-           powerUpJumpCount.value--;
-           if(powerUpJumpCount.value <= 0)
-           {
-               powerUpJumpCount.value = 0;
-               jumpForce.value = 3.5f;
-           }
+            yVar = jumpForce.value;
+            jumpCount++;
+        
+            powerUpJumpCount.value--;
+            if(powerUpJumpCount.value <= 0)
+            {
+                powerUpJumpCount.value = 0;
+                jumpForce.value = 3.5f;
+                new WaitForSeconds(1);
+                powerUpJumpCount.value = 3;
+            }
        }
 
-       movement = transform.TransformDirection(movement);
-       controller.Move((movement) * Time.deltaTime);
+       
+        movement = transform.TransformDirection(movement);
+        controller.Move((movement) * Time.deltaTime);
    }
 }
