@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,11 +16,6 @@ public class FloatBehaviour : MonoBehaviour
         if(nullCheck != null) return;
         UpdateValue(otherValue);
         triggerEnterEvent.Invoke();
-
-
-        
-    
-
     }
 
     public void UpdateValue(float number)
@@ -32,3 +28,4 @@ public class FloatBehaviour : MonoBehaviour
         }
     }
 }
+*/
