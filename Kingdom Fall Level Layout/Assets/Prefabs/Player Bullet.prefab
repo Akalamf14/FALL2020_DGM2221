@@ -16,7 +16,9 @@ GameObject:
   - component: {fileID: 4288880182895079722}
   - component: {fileID: -1392318431750526519}
   - component: {fileID: 1227577908480697786}
-  m_Layer: 0
+  - component: {fileID: 5391994710116714750}
+  - component: {fileID: -8524181170670903579}
+  m_Layer: 20
   m_Name: Player Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3775,3 +3777,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ca78058c73fc4459fb7b7b793574c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5391994710116714750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165915282913905653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062897778b0882e4a96e6fcf0d4593df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5e36431f7eae5d44e861b163fe17391c, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  delayTime: 0.01
+--- !u!65 &-8524181170670903579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165915282913905653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33, y: 0.55, z: 0.39}
+  m_Center: {x: -0.15, y: 0, z: 0}

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3372629686599146655}
   - component: {fileID: 3372629686599146652}
   - component: {fileID: 1545931699160711898}
-  - component: {fileID: 8625049753095863251}
   - component: {fileID: 5508265891198833933}
   m_Layer: 0
   m_Name: Minion 1
@@ -134,20 +133,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8625049753095863251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3372629686599146658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84d3dd326a90ca344ad4c65c5cccb665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  getTransformAction: {fileID: 11400000, guid: 329ae9570eabc0e41ad126cd23a18787, type: 2}
-  callForTransformAction: {fileID: 11400000, guid: b95956d295a4b2d4d994b2ae72d389bf, type: 2}
 --- !u!54 &5508265891198833933
 Rigidbody:
   m_ObjectHideFlags: 0
