@@ -15,7 +15,7 @@ public class Countdown : MonoBehaviour
 
     private IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(15f);
         countDownEvent.Invoke();
 
 
