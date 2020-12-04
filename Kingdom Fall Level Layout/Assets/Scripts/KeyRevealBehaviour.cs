@@ -6,17 +6,22 @@ using UnityEngine.Events;
 
 public class KeyRevealBehaviour : MonoBehaviour
 {
-    public List<int> objList;
-    public UnityEvent triggerEvent;
+    public IntData keyValue;
+    public UnityEvent startEvent, revealEvent;
+    public int maxValue;
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        triggerEvent.Invoke();
+        startEvent.Invoke();
+        keyValue.value = 0;
     }
 
-    public void KeyReveal()
+    private void OnEnable()
     {
-        objList.Remove(1);
+        if(keyValue.value >= maxValue)
+        {
+            revealEvent.Invoke();
+        }
     }
 
 
