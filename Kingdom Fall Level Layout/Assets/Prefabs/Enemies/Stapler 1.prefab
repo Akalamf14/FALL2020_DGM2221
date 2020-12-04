@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3909895239003954740}
   - component: {fileID: 3267000408440419385}
   - component: {fileID: -4014739234827492935}
+  - component: {fileID: -5569399684261867665}
+  - component: {fileID: 7588030324261398121}
   m_Layer: 0
   m_Name: Stapler 1
   m_TagString: Untagged
@@ -118,3 +120,30 @@ NavMeshAgent:
   m_BaseOffset: 0.49999997
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &-5569399684261867665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868789362217058126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 0.5, z: 15}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7588030324261398121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868789362217058126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f480a9fd4bc26439dda4a9470d11e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
+  wanderRadius: 0
