@@ -9,7 +9,7 @@ public class PlayerShoot : MonoBehaviour
     public IntData ammoCount, maxAmmo;
     public GameObject prefab;
     public Transform instancer;
-    public float reloadTime;
+    public FloatData reloadTime;
     public WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     public Image coolDownImage;
     private bool canShoot = true;
@@ -41,13 +41,13 @@ public class PlayerShoot : MonoBehaviour
     private IEnumerator reload()
     {
         canShoot = false;
-        var countDown = reloadTime;
+        var countDown = reloadTime.value;
 
         while(countDown > 0)
         {
             yield return wffu;
             countDown -= .01f;
-            coolDownImage.fillAmount = countDown / reloadTime;
+            coolDownImage.fillAmount = countDown / reloadTime.value;
         }
 
         ammoCount.value = maxAmmo.value;
