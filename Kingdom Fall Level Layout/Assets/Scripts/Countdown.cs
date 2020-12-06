@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Countdown : MonoBehaviour
 {
     public UnityEvent countDownEvent;
+    public float timer;
 
 
     private void OnTriggerEnter(Collider other)
@@ -15,7 +16,7 @@ public class Countdown : MonoBehaviour
 
     private IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(timer);
         countDownEvent.Invoke();
 
 

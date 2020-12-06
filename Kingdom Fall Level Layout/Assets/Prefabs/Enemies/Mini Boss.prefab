@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6896391232045844850}
   - component: {fileID: -658630680067468039}
   - component: {fileID: -2842325427372090962}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Mini Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

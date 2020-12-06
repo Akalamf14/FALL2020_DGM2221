@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4014739234827492935}
   - component: {fileID: -5569399684261867665}
   - component: {fileID: 7588030324261398121}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Stapler 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

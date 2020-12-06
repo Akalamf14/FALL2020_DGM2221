@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2485367655691860107}
   - component: {fileID: 945603428654256410}
   - component: {fileID: 4660565215437831043}
-  m_Layer: 0
+  m_Layer: 27
   m_Name: PaperHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2552,6 +2552,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayEvent:
     m_PersistentCalls:
       m_Calls: []
   delayTime: 0.01

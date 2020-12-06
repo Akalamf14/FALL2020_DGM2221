@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1958455337179796036}
   - component: {fileID: 1958455337179796035}
   - component: {fileID: 1958455337179796034}
-  - component: {fileID: 1958455337179796033}
+  - component: {fileID: -32595114100817917}
   m_Layer: 12
   m_Name: Jump Pickup
   m_TagString: Untagged
@@ -97,7 +97,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &1958455337179796033
+--- !u!114 &-32595114100817917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,22 +106,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1958455337179796032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b207576e1170e4740a6ed3d087cb39d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 062897778b0882e4a96e6fcf0d4593df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1958455337179796032}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 11400000, guid: 5d97f58b564538e40a59a6b67da97e88, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 5.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  jumpForceChange: {fileID: 11400000, guid: 5d97f58b564538e40a59a6b67da97e88, type: 2}
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  delayTime: 0.01
