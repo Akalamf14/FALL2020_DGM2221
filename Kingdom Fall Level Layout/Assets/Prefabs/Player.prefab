@@ -289,7 +289,7 @@ MonoBehaviour:
   maxAmmo: {fileID: 11400000, guid: 0ff6510b58106e5489322a69a2d5ffd2, type: 2}
   prefab: {fileID: 1165915282913905653, guid: e7e6dd0cff6a30d429a950b5595b9be6, type: 3}
   instancer: {fileID: 9174639415419564996}
-  reloadTime: 0
+  reloadTime: {fileID: 0}
   coolDownImage: {fileID: 0}
 --- !u!1 &9174639414860820128
 GameObject:

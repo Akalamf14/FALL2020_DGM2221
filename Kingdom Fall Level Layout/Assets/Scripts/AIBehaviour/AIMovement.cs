@@ -11,6 +11,10 @@ public class AIMovement : MonoBehaviour
     public Transform destination;
     private bool canHunt, canPatrol;
 
+    Rigidbody TheRigidbody;
+    public float myMoveSpeed;
+    public float waitTime;
+
     public float wanderRadius;
     
 
@@ -18,6 +22,8 @@ public class AIMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(Patrol());
+
+        TheRigidbody = GetComponent<Rigidbody>();
         
     }
 
@@ -37,6 +43,23 @@ public class AIMovement : MonoBehaviour
 
         StartCoroutine(canHunt ? OnTriggerEnter(other) : Patrol());
     }
+
+    //knockback
+    void OnCollisionEnter (Collision col)
+    {
+        if (col.gameObject.tag == "Player") 
+        {
+            Debug.Log ("HiHi");
+            TheRigidbody.velocity = Vector3.back*myMoveSpeed;
+            StartCoroutine(Bounce());
+        }
+    }
+
+    IEnumerator Bounce()
+    {
+        yield return new WaitForSeconds(waitTime);
+    }    
+ 
 
     private void OnTriggerExit(Collider other)
     {
