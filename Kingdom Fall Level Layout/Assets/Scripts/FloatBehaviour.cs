@@ -1,5 +1,4 @@
-﻿/*
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,11 +9,14 @@ public class FloatBehaviour : MonoBehaviour
 
     public UnityEvent triggerEnterEvent, atZeroEvent;
 
+    private void Start()
+    {
+        value = 1f;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        var otherValue = other.GetComponent<FloatHolder>();
-        if(nullCheck != null) return;
-        UpdateValue(otherValue);
+        Debug.Log("trigger entered");
         triggerEnterEvent.Invoke();
     }
 
@@ -22,10 +24,13 @@ public class FloatBehaviour : MonoBehaviour
     {
         value += number;
 
-        if(value < 0)
+        if(value <= 0)
         {
             atZeroEvent.Invoke();
         }
+       
     }
+
+     
 }
-*/
+

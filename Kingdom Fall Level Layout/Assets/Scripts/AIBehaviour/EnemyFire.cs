@@ -18,7 +18,11 @@ public class EnemyFire : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        CheckIfTimeToFire();
+        if(other.gameObject.name.Equals("Player"))
+        {
+            CheckIfTimeToFire();
+        }
+        
     }
 
     private void CheckIfTimeToFire()
