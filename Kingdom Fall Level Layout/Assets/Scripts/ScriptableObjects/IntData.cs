@@ -10,7 +10,7 @@ public class IntData : ScriptableObject
 {
     public int value;
 
-    public UnityEvent countdownEvent, setValueEvent, updateValueEvent, lessThanZeroEvent;
+    public UnityEvent countdownEvent, setValueEvent, updateValueEvent, lessThanZeroEvent, maxValueEvent;
 
     public void TimerCountdown(int value)
     {
@@ -46,6 +46,16 @@ public class IntData : ScriptableObject
         if(value >= 1)
         {
             value = 1;
+        }
+    }
+
+    public void UpdateIntPlusOne(int maxValue)
+    {
+        value++;
+        
+        if(value == maxValue)
+        {
+            maxValueEvent.Invoke();
         }
     }
 }
