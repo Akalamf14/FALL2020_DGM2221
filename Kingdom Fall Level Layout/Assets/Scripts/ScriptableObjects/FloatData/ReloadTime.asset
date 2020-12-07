@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a251cbf2ab2d79468283d68daa3b6ca, type: 3}
   m_Name: ReloadTime
   m_EditorClassIdentifier: 
-  value: 2.5
+  value: 3
   setValueEvent:
     m_PersistentCalls:
       m_Calls: []

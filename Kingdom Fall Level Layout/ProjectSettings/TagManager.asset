@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Bullet Prefab
   - 
   - 
   - Player Interaction
@@ -23,7 +23,7 @@ TagManager:
   - 
   - 
   - AI
-  - 
+  - AI Death Collider
   - 
   - 
   - AI Interaction

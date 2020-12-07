@@ -51,6 +51,7 @@ public class PlayerShoot : MonoBehaviour
         }
 
         ammoCount.value = maxAmmo.value;
+        
     }
 
     
