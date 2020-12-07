@@ -7,17 +7,18 @@ public class FloatBehaviour : MonoBehaviour
 {
     public float value = 1f;
 
-    public UnityEvent triggerEnterEvent, atZeroEvent;
+    public UnityEvent collisionEnterEvent, atZeroEvent;
 
-    private void Start()
-    {
-        value = 1f;
-    }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("trigger entered");
-        triggerEnterEvent.Invoke();
+        if(collision.collider.tag == "Bullet")
+        {
+            Debug.Log("Object Collided");
+            collisionEnterEvent.Invoke();
+
+        }
+        
     }
 
     public void UpdateValue(float number)
@@ -26,7 +27,8 @@ public class FloatBehaviour : MonoBehaviour
 
         if(value <= 0)
         {
-            atZeroEvent.Invoke();
+            //atZeroEvent.Invoke();
+            Destroy(gameObject);
         }
        
     }
