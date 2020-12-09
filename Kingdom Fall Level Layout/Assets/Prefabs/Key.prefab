@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5715514304536705411}
   - component: {fileID: 243752205141341656}
   - component: {fileID: 3219108472818573191}
-  - component: {fileID: -8976687395351289951}
+  - component: {fileID: -1069456020224864955}
   m_Layer: 12
   m_Name: Key
   m_TagString: Untagged
@@ -7534,7 +7534,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delayTime: 0.01
---- !u!114 &-8976687395351289951
+--- !u!114 &-1069456020224864955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7543,7 +7543,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5501546914933705406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb4b507ff52e40f58f68c2065e32636, type: 3}
+  m_Script: {fileID: 11500000, guid: 049e4a0334f03b843ad92ad1767aee5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manageVisibility: 1
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnableEvent:
+    m_PersistentCalls:
+      m_Calls: []
