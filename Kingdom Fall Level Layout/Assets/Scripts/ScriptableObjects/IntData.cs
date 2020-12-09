@@ -49,6 +49,11 @@ public class IntData : ScriptableObject
         }
     }
 
+    public void ResetValue (int number)
+    {
+        value = number;
+    }
+
     public void UpdateIntPlusOne(int maxValue)
     {
         value++;
