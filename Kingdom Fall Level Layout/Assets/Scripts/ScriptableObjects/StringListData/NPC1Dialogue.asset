@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: NPC1Dialogue
   m_EditorClassIdentifier: 
   stringList:
-  - 
-  - 
-  - 
+  - hello
+  - my name is jared
+  - what's your name?

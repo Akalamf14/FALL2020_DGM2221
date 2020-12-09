@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 9108083170112828021}
   - component: {fileID: 1118497113794654674}
   - component: {fileID: 7600692072735706365}
+  - component: {fileID: -6000153414066477976}
   m_Layer: 12
   m_Name: NPC
   m_TagString: Untagged
@@ -209,7 +210,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -217,6 +230,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delayTime: 0.01
+--- !u!114 &-6000153414066477976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864979686138886625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098955737e0f3ea4a8c45fa760bbd6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 0}
+  sentences: []
+  typingSpeed: 0
 --- !u!1 &4072595843797586533
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && ammoCount.value > 0)
+        if(Input.GetMouseButtonDown(1) && ammoCount.value > 0)
         {
             Fire();
             StartCoroutine(reload());

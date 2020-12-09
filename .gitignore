@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+*.pdf
+
+Kingdom Fall Level Layout/Assets/TextMesh Pro/Documentation.meta
+
+Kingdom Fall Level Layout/Assets/TextMesh Pro/Documentation/
