@@ -17,16 +17,16 @@ public class CharacterMouseLookAt : MonoBehaviour
    private FloatData moveSpeed;
    private bool canMove = true;
 
-   public IntData playerJumpCount;
    private int jumpCount;
-   public IntData powerUpJumpCount;
+   private int maxJumpCount = 1;
+
 
    private void Start()
    {
        moveSpeed = normalSpeed;
        controller = GetComponent<CharacterController>();
        jumpForce.value = 3.5f;
-       powerUpJumpCount.value = 3;
+       
    }
 
    void Update()
@@ -61,21 +61,12 @@ public class CharacterMouseLookAt : MonoBehaviour
            jumpCount = 0;
        }
 
-       if(Input.GetButtonDown("Jump") && jumpCount < playerJumpCount.value)
+       if(Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
        {
             yVar = jumpForce.value;
             jumpCount++;
         
-            powerUpJumpCount.value--;
-            if(powerUpJumpCount.value <= 0)
-            {
-                powerUpJumpCount.value = 0;
-                jumpForce.value = 3.5f;
-                new WaitForSeconds(1);
-                powerUpJumpCount.value = 3;
-            }
-       }
-
+        }
        
         movement = transform.TransformDirection(movement);
         controller.Move((movement) * Time.deltaTime);

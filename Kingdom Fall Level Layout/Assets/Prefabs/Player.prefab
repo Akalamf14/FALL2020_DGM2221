@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 9174639414641126018}
   - component: {fileID: 9174639414641126019}
   - component: {fileID: 9174639414641126020}
-  - component: {fileID: 9174639414641126021}
   - component: {fileID: 9174639414641126023}
   - component: {fileID: 9174639414641126022}
   m_Layer: 8
@@ -142,8 +141,6 @@ MonoBehaviour:
   jumpForce: {fileID: 11400000, guid: 5d97f58b564538e40a59a6b67da97e88, type: 2}
   normalSpeed: {fileID: 11400000, guid: 1a12d7e645707374ca77d7e9b41ac3ea, type: 2}
   fastSpeed: {fileID: 11400000, guid: f70fb798c54d49141b054cc3cadf680f, type: 2}
-  playerJumpCount: {fileID: 11400000, guid: 2c482b0837ce4a74597d3fc7f590dc72, type: 2}
-  powerUpJumpCount: {fileID: 11400000, guid: e93acae05a19f3a46a6fc2d13bef7bc9, type: 2}
 --- !u!114 &9174639414641126018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,36 +224,6 @@ MonoBehaviour:
   onEnableEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9174639414641126021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9174639414641126042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b38c336fbba1104f840afc24c2c228c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameAction: {fileID: 11400000, guid: b95956d295a4b2d4d994b2ae72d389bf, type: 2}
-  handlerEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 9174639414641126016}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  holdTime: 0
-  stopHandling: 0
 --- !u!54 &9174639414641126023
 Rigidbody:
   m_ObjectHideFlags: 0
