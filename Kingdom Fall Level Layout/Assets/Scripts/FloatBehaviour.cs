@@ -27,8 +27,8 @@ public class FloatBehaviour : MonoBehaviour
 
         if(value <= 0)
         {
-            //atZeroEvent.Invoke();
-            Destroy(gameObject);
+            atZeroEvent.Invoke();
+            //Destroy(gameObject);
         }
        
     }
