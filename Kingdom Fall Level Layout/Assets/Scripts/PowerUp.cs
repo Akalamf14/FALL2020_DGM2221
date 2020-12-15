@@ -19,9 +19,9 @@ public class PowerUp : MonoBehaviour
 
     IEnumerator Pickup(Collider player)
     {
-        jumpForce.value = 5.7f;
+        jumpForce.value = 5.5f;
         GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
 
         yield return new WaitForSeconds(returnToNormalJump);
 
@@ -30,7 +30,7 @@ public class PowerUp : MonoBehaviour
         yield return new WaitForSeconds(enablePowerUp);
 
         GetComponent<MeshRenderer>().enabled = true;
-        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
         
 
         

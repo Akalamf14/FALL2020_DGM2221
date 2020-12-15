@@ -15,15 +15,15 @@ public class PowerUpHealth : MonoBehaviour
         }
     }
 
-    IEnumerator Pickup(Collider player)
+    IEnumerator Pickup(Collider other)
     {
         GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
 
         yield return new WaitForSeconds(enablePowerUp);
 
         GetComponent<MeshRenderer>().enabled = true;
-        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
         
 
         
